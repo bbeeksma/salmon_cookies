@@ -29,15 +29,19 @@ function randCustomersPerHour(min,max){
 function randCustomersEachHour(){
   var max = this.maxHourlyCustomers;
   var min = this.minHourlyCustomers;
-  var cookies = [];
+  var customers = [];
   for(var i = 0; i < this.eachHourOfOperation.length; i++){
-    cookies[i] = randCustomersPerHour(min,max);
+    customers[i] = randCustomersPerHour(min,max);
   }
-  return cookies;
+  return customers;
 }
 
 function randCookesEachHour(){
-  //do a thing here
+  var cookies = [];
+  for(var i = 0; i < this.customersEachHour.length; i++){
+    cookes[i] = this.customersEachHour[i] * this.avgCookiesPerSale;
+  }
+  return cookies;
 }
 
 var firstAndPike = {
