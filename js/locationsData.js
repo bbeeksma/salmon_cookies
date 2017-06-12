@@ -10,20 +10,30 @@ var locations = [
   ,'Alki'
 ];
 
-function getEachHourOfOperation(){
-  //do stuff here
+function getEachHourOfOperation(){ //oh noes only works with start/end hoops ON the hour.
+  var startHoop = this.hoursOfOperation[0];
+  var endHoop = this.hoursOfOperation[1];
+  var eachHoop = [];
+  var indexPos = 0;
+  for(var i = startHoop; i <= endHoop; i++){
+    eachHoop[indexPos] = i;
+    indexPos++;
+  }
+  return eachHoop;
 }
 
-function randCustomersPerHour(){
-  return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers + 1) + this.minHourlyCustomers);
-}
-
-function cookiesSold(){
-  return randCustomersPerHour() * this.avgCookiesPerSale;
+function randCustomersPerHour(min,max){
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function randCustomersEachHour(){
-  //do a thing here
+  var max = this.maxHourlyCustomers;
+  var min = this.minHourlyCustomers;
+  var cookies = [];
+  for(var i = 0; i < this.eachHourOfOperation.length; i++){
+    cookies[i] = randCustomersPerHour(min,max);
+  }
+  return cookies;
 }
 
 function randCookesEachHour(){
@@ -33,11 +43,11 @@ function randCookesEachHour(){
 var firstAndPike = {
   location: '1st and Pike'
   ,address: ''
-  ,hoursOfOperation: [8,20]
+  ,hoursOfOperation: [8,20] //right now HooP functions only works if you start ON the hour.  no opening at 8:30!
   ,minHourlyCustomers: ''
   ,maxHourlyCustomers: ''
   ,avgCookiesPerSale: ''
-  ,eachHourOfOperation: []
+  ,eachHourOfOperation: getEachHourOfOperation()
   ,customersEachHour: randCustomersEachHour()
   ,cookesEachHour: randCookesEachHour()
 };
