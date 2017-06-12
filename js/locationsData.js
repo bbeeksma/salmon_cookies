@@ -10,6 +10,10 @@ var locations = [
   ,'Alki'
 ];
 
+function getEachHourOfOperation(){
+  //do stuff here
+}
+
 function randCustomersPerHour(){
   return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers + 1) + this.minHourlyCustomers);
 }
@@ -29,10 +33,11 @@ function randCookesEachHour(){
 var firstAndPike = {
   location: '1st and Pike'
   ,address: ''
-  ,hoursOfOperation: ''
+  ,hoursOfOperation: [8,20]
   ,minHourlyCustomers: ''
   ,maxHourlyCustomers: ''
   ,avgCookiesPerSale: ''
+  ,eachHourOfOperation: []
   ,customersEachHour: randCustomersEachHour()
   ,cookesEachHour: randCookesEachHour()
 };
