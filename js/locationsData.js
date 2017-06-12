@@ -31,7 +31,7 @@ function randCustomersPerHour(min,max){
 
 function randCustomersEachHour(minCust,maxCust,startHoop,endHoop){
   var customers = [];
-  for(var i = 0; i < (endHoop - startHoop); i++){
+  for(var i = 0; i <= (endHoop - startHoop); i++){
     customers[i] = randCustomersPerHour(minCust,maxCust);
   }
   return customers;
@@ -53,7 +53,7 @@ var firstAndPike = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i < (endHoop - startHoop); i++){
+    for(var i = 0; i <= (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
@@ -77,7 +77,7 @@ var SeaTacAirport = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i < (endHoop - startHoop); i++){
+    for(var i = 0; i <= (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
@@ -101,7 +101,7 @@ var SeattleCenter = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i < (endHoop - startHoop); i++){
+    for(var i = 0; i <= (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
@@ -125,7 +125,7 @@ var CapitolHill = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i < (endHoop - startHoop); i++){
+    for(var i = 0; i <= (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
@@ -149,7 +149,7 @@ var Alki = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i < (endHoop - startHoop); i++){
+    for(var i = 0; i <= (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
