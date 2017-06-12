@@ -10,7 +10,7 @@ var locations = [
   ,'Alki'
 ];
 
-function getEachHourOfOperation(start,end){ //oh noes only works with start/end hoops ON the hour.
+function getEachHourOfOperation(start,end){ //oh noes only works with start/end hoops ON the hour. don't actually need this right now, but may be of use later
   var eachHoop = [];
   var indexPos = 0;
   for(var i = start; i <= end; i++){
@@ -25,7 +25,7 @@ function randCustomersPerHour(min,max){
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function randCustomersEachHour(minCust,maxCust,startHoop,endHoop){
+function randCustomersEachHour(minCust,maxCust,startHoop,endHoop){ //don't actually need this right now, but may be of use later
   var customers = [];
   for(var i = 0; i < (endHoop - startHoop); i++){
     customers[i] = randCustomersPerHour(minCust,maxCust);
@@ -41,7 +41,6 @@ var firstAndPike = {
   ,minHourlyCustomers: 23
   ,maxHourlyCustomers: 65
   ,avgCookiesPerSale: 6.3
-  ,eachHourOfOperations: getEachHourOfOperation(this.hoursOfOperation[0],this.hoursOfOperation[1])
 
   ,randCookiesEachHour: function(){
     var minCust = this.minHourlyCustomers;
@@ -52,7 +51,6 @@ var firstAndPike = {
     for(var i = 0; i < (endHoop - startHoop); i++){
       cookies[i] = randCustomersPerHour(minCust,maxCust) * this.avgCookiesPerSale;
     }
-    console.log('cookies :: ' + cookies);
     return cookies;
   }
 };
