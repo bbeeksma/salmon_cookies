@@ -10,12 +10,10 @@ var locations = [
   ,'Alki'
 ];
 
-function getEachHourOfOperation(){ //oh noes only works with start/end hoops ON the hour.
-  var startHoop = this.hoursOfOperation[0];
-  var endHoop = this.hoursOfOperation[1];
+function getEachHourOfOperation(start,end){ //oh noes only works with start/end hoops ON the hour.
   var eachHoop = [];
   var indexPos = 0;
-  for(var i = startHoop; i <= endHoop; i++){
+  for(var i = start; i <= end; i++){
     eachHoop[indexPos] = i;
     indexPos++;
   }
@@ -29,16 +27,20 @@ function randCustomersPerHour(min,max){
 function randCustomersEachHour(){
   var max = this.maxHourlyCustomers;
   var min = this.minHourlyCustomers;
+  var startHoop = this.hoursOfOperation[0];
+  var endHoop = this.hoursOfOperation[1];
   var customers = [];
-  for(var i = 0; i < this.eachHourOfOperation.length; i++){
+  for(var i = 0; i < getEachHourOfOperation(startHoop,endHoop).length; i++){
     customers[i] = randCustomersPerHour(min,max);
   }
   return customers;
 }
 
 function randCookesEachHour(){
+  var startHoop = this.hoursOfOperation[0];
+  var endHoop = this.hoursOfOperation[1];
   var cookies = [];
-  for(var i = 0; i < this.customersEachHour.length; i++){
+  for(var i = 0; i < getEachHourOfOperation(start,end).length; i++){
     cookes[i] = this.customersEachHour[i] * this.avgCookiesPerSale;
   }
   return cookies;
@@ -46,12 +48,11 @@ function randCookesEachHour(){
 
 var firstAndPike = {
   location: '1st and Pike'
-  ,address: ''
+  ,address: '123 Seasame St. Someplace, IA'
   ,hoursOfOperation: [8,20] //right now HooP functions only works if you start ON the hour.  no opening at 8:30!
-  ,minHourlyCustomers: ''
-  ,maxHourlyCustomers: ''
-  ,avgCookiesPerSale: ''
-  ,eachHourOfOperation: getEachHourOfOperation()
+  ,minHourlyCustomers: 23
+  ,maxHourlyCustomers: 65
+  ,avgCookiesPerSale: 6.3
   ,customersEachHour: randCustomersEachHour()
   ,cookesEachHour: randCookesEachHour()
 };
