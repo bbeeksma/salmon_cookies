@@ -10,6 +10,11 @@ var locations = [
   ,Alki
 ];
 
+function floatSux(float){
+  decimalTens = Math.round(float * 10) / 10;
+  return decimalTens;
+}
+
 function getEachHourOfOperation(start,end){ //oh noes only works with start/end hoops ON the hour.
   var eachHoop = [];
   var indexPos = 0;
@@ -51,7 +56,7 @@ var firstAndPike = {
     for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = this.customersEachHour[i] * this.avgCookiesPerSale;
+      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
     }
   }
 };
@@ -75,7 +80,7 @@ var SeaTacAirport = {
     for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = this.customersEachHour[i] * this.avgCookiesPerSale;
+      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
     }
   }
 };
@@ -99,7 +104,7 @@ var SeattleCenter = {
     for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = this.customersEachHour[i] * this.avgCookiesPerSale;
+      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
     }
   }
 };
@@ -123,7 +128,7 @@ var CapitolHill = {
     for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = this.customersEachHour[i] * this.avgCookiesPerSale;
+      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
     }
   }
 };
@@ -147,7 +152,7 @@ var Alki = {
     for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = this.customersEachHour[i] * this.avgCookiesPerSale;
+      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
     }
   }
 };
