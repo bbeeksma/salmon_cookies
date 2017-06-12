@@ -10,16 +10,6 @@ function sellAllTheCookies(){
   }
 }
 
-function convertTimeToTwelveHr(time){
-  var twelveHrTime;
-  if(time >= 12){
-    twelveHrTime = (time - 12) + 'pm';
-  }
-  else{
-    twelveHrTime = time + 'am';
-  }
-}
-
 sellAllTheCookies();
 
 for(var i = 0; i < locations.length; i++){

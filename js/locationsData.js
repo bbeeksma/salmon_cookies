@@ -7,6 +7,17 @@ function floatSux(float){
   return decimalTens;
 }
 
+function convertTimeToTwelveHr(time){
+  var twelveHrTime;
+  if(time >= 12){
+    twelveHrTime = '' + (time - 12) + 'pm';
+  }
+  else{
+    twelveHrTime = '' + time + 'am';
+  }
+  return twelveHrTime;
+}
+
 function getEachHourOfOperation(start,end){ //oh noes only works with start/end hoops ON the hour.
   var eachHoop = [];
   var indexPos = 0;
