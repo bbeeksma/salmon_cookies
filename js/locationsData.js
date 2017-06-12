@@ -17,6 +17,7 @@ function getEachHourOfOperation(start,end){ //oh noes only works with start/end 
     eachHoop[indexPos] = i;
     indexPos++;
   }
+  console.log('eachHoop :: ' + eachHoop);
   return eachHoop;
 }
 
@@ -24,26 +25,13 @@ function randCustomersPerHour(min,max){
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function randCustomersEachHour(){
-  var max = this.maxHourlyCustomers;
-  var min = this.minHourlyCustomers;
-  var startHoop = this.hoursOfOperation[0];
-  var endHoop = this.hoursOfOperation[1];
+function randCustomersEachHour(minCust,maxCust,startHoop,endHoop){
   var customers = [];
   for(var i = 0; i < getEachHourOfOperation(startHoop,endHoop).length; i++){
-    customers[i] = randCustomersPerHour(min,max);
+    customers[i] = randCustomersPerHour(minCust,maxCust);
   }
+  console.log('customers :: ' + customers);
   return customers;
-}
-
-function randCookesEachHour(){
-  var startHoop = this.hoursOfOperation[0];
-  var endHoop = this.hoursOfOperation[1];
-  var cookies = [];
-  for(var i = 0; i < getEachHourOfOperation(start,end).length; i++){
-    cookes[i] = this.customersEachHour[i] * this.avgCookiesPerSale;
-  }
-  return cookies;
 }
 
 var firstAndPike = {
@@ -53,6 +41,17 @@ var firstAndPike = {
   ,minHourlyCustomers: 23
   ,maxHourlyCustomers: 65
   ,avgCookiesPerSale: 6.3
-  ,customersEachHour: randCustomersEachHour()
-  ,cookesEachHour: randCookesEachHour()
+
+  ,randCookesEachHour: function(){
+    var minCust = this.minHourlyCustomers;
+    var maxCust = this.maxHourlyCustomers;
+    var startHoop = this.hoursOfOperation[0];
+    var endHoop = this.hoursOfOperation[1];
+    var cookies = [];
+    for(var i = 0; i < randCustomersEachHour(minCust,maxCust,startHoop,endHoop).length; i++){
+      cookies[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i] * this.avgCookiesPerSale;
+    }
+    console.log('cookies :: ' + cookies);
+    return cookies;
+  }
 };
