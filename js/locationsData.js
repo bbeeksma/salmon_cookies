@@ -2,14 +2,6 @@
 
 console.log('locations.js loaded');
 
-var locations = [
-  firstAndPike
-  ,SeaTacAirport
-  ,SeattleCenter
-  ,CapitolHill
-  ,Alki
-];
-
 function floatSux(float){
   decimalTens = Math.round(float * 10) / 10;
   return decimalTens;
@@ -61,7 +53,7 @@ var firstAndPike = {
   }
 };
 
-var SeaTacAirport = {
+var seaTacAirport = {
   location: 'SeaTac Airport'
   ,address: '123 Seasame St. Someplace, IA'
   ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
@@ -85,7 +77,7 @@ var SeaTacAirport = {
   }
 };
 
-var SeattleCenter = {
+var seattleCenter = {
   location: 'Seattle Center'
   ,address: '123 Seasame St. Someplace, IA'
   ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
@@ -109,7 +101,7 @@ var SeattleCenter = {
   }
 };
 
-var CapitolHill = {
+var capitolHill = {
   location: 'Capitol Hill'
   ,address: '123 Seasame St. Someplace, IA'
   ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
@@ -133,7 +125,7 @@ var CapitolHill = {
   }
 };
 
-var Alki = {
+var alki = {
   location: 'Alki'
   ,address: '123 Seasame St. Someplace, IA'
   ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
@@ -156,3 +148,11 @@ var Alki = {
     }
   }
 };
+
+var locations = [
+  firstAndPike
+  ,seaTacAirport
+  ,seattleCenter
+  ,capitolHill
+  ,alki
+];
