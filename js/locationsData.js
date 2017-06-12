@@ -14,8 +14,8 @@ function randCustomersPerHour(){
   return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers + 1) + this.minHourlyCustomers);
 }
 
-function CookiesSold(){
-  //do a thing here
+function cookiesSold(){
+  return randCustomersPerHour() * this.avgCookiesPerSale;
 }
 
 function randCustomersEachHour(){
