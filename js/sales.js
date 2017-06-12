@@ -4,6 +4,24 @@ console.log('sales.js loaded');
 
 console.log(locations);
 
+function sellAllTheCookies(){
+  for(var t = 0; t < locations.length; t++){
+    locations[t].sellRandCookies();
+  }
+}
+
+function convertTimeToTwelveHr(time){
+  var twelveHrTime;
+  if(time >= 12){
+    twelveHrTime = (time - 12) + 'pm';
+  }
+  else{
+    twelveHrTime = time + 'am';
+  }
+}
+
+sellAllTheCookies();
+
 for(var i = 0; i < locations.length; i++){
   var newHeader = document.createElement('h2');
   var newText = document.createTextNode(locations[i].location);
@@ -13,4 +31,12 @@ for(var i = 0; i < locations.length; i++){
   var newUl = document.createElement('ul');
   var ulPosition = document.getElementsByTagName('h2')[i];
   ulPosition.appendChild(newUl);
+  for(var j = 0; j < locations[i].eachHourOfOperation.length; j++){
+    var textString = 'time: ' + locations[i].eachHourOfOperation[j] + ' :: cookies: ' + locations[i].cookiesSold[j];
+    var newLi = document.createElement('li');
+    var newLiText = document.createTextNode(textString);
+    newLi.appendChild(newLiText);
+    var liPosition = document.getElementsByTagName('ul')[i];
+    liPosition.appendChild(newLi);
+  }
 }

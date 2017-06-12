@@ -3,7 +3,7 @@
 console.log('locations.js loaded');
 
 function floatSux(float){
-  decimalTens = Math.round(float * 10) / 10;
+  var decimalTens = Math.round(float * 10) / 10;
   return decimalTens;
 }
 
