@@ -10,6 +10,22 @@ var locations = [
   ,'Alki'
 ];
 
+function randCustomersPerHour(){
+  //do a thing here
+}
+
+function randCookiesSold(){
+  //do a thing here
+}
+
+function randCustomersEachHour(){
+  //do a thing here
+}
+
+function randCookesEachHour(){
+  //do a thing here
+}
+
 var firstAndPike = {
   location: '1st and Pike'
   ,address: ''
@@ -17,7 +33,6 @@ var firstAndPike = {
   ,minHourlyCustomers: ''
   ,maxHourlyCustomers: ''
   ,avgCookiesPerSale: ''
-  ,randCustomersPerHour: function(){
-    //do a thing here
-  }
+  ,customersEachHour: randCustomersEachHour()
+  ,cookesEachHour: randCookesEachHour()
 };
