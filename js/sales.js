@@ -10,4 +10,7 @@ for(var i = 0; i < locations.length; i++){
   newHeader.appendChild(newText);
   var position = document.getElementsByTagName('body')[0];
   position.appendChild(newHeader);
+  var newUl = document.createElement('ul');
+  var ulPosition = document.getElementsByTagName('h2')[i];
+  ulPosition.appendChild(newUl);
 }
