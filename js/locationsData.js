@@ -11,10 +11,10 @@ var locations = [
 ];
 
 function randCustomersPerHour(){
-  //do a thing here
+  return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers + 1) + this.minHourlyCustomers);
 }
 
-function randCookiesSold(){
+function CookiesSold(){
   //do a thing here
 }
 
