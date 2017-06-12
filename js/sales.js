@@ -19,7 +19,7 @@ for(var i = 0; i < locations.length; i++){
   var position = document.getElementsByTagName('body')[0];
   position.appendChild(newHeader);
   var newUl = document.createElement('ul');
-  var ulPosition = document.getElementsByTagName('h2')[i];
+  var ulPosition = document.getElementsByTagName('body')[0];
   ulPosition.appendChild(newUl);
   for(var j = 0; j < locations[i].eachHourOfOperation.length; j++){
     var textString = 'time: ' + locations[i].eachHourOfOperation[j] + ' :: cookies: ' + locations[i].cookiesSold[j];
