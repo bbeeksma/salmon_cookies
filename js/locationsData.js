@@ -41,6 +41,7 @@ var firstAndPike = {
   ,minHourlyCustomers: 23
   ,maxHourlyCustomers: 65
   ,avgCookiesPerSale: 6.3
+  ,eachHourOfOperations: getEachHourOfOperation(this.hoursOfOperation[0],this.hoursOfOperation[1])
 
   ,randCookiesEachHour: function(){
     var minCust = this.minHourlyCustomers;
