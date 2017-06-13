@@ -57,7 +57,7 @@ function CookieStore(location, address, hoursOfOperation, minHourlyCustomers, ma
   this.customersEachHour = customersEachHour || [];
   this.cookiesSold = cookiesSold || [];
 
-  this.selRandCookies = function(){
+  this.sellRandCookies = function(){
     var minCust = this.minHourlyCustomers;
     var maxCust = this.maxHourlyCustomers;
     var startHoop = this.hoursOfOperation[0];
