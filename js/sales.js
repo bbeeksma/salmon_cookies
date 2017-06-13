@@ -16,7 +16,13 @@ function getLongestHoop(){
   return LongestLocationHoop;
 }
 
-console.log(getLongestHoop());
+for(var i = 0; i < getLongestHoop().length; i++){
+  var newElement = document.createElement('th');
+  newElement.textContent = getLongestHoop()[i];
+  var newTHPosition = document.getElementById('cookie_sale_head');
+  newTHPosition.appendChild(newElement);
+}
+
 /*
 for(var i = 0; i < locations.length; i++){
   var newHeader = document.createElement('h2');
