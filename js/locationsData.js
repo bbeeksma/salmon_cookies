@@ -9,11 +9,17 @@ function floatSux(float){
 
 function convertTimeToTwelveHr(time){
   var twelveHrTime;
-  if(time >= 12){
+  if(time > 12){
     twelveHrTime = '' + (time - 12) + 'pm';
   }
-  else{
+  else if (time < 12 && time !== 0){
     twelveHrTime = '' + time + 'am';
+  }
+  else if (time === 12){
+    twelveHrTime = '' + time + 'pm';
+  }
+  else{
+    twelveHrTime = '12am';
   }
   return twelveHrTime;
 }
@@ -22,7 +28,7 @@ function getEachHourOfOperation(start,end){ //oh noes only works with start/end 
   var eachHoop = [];
   var indexPos = 0;
   for(var i = start; i <= end; i++){
-    eachHoop[indexPos] = i;
+    eachHoop[indexPos] = convertTimeToTwelveHr(i);
     indexPos++;
   }
   return eachHoop;

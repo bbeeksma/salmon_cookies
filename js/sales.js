@@ -22,7 +22,7 @@ for(var i = 0; i < locations.length; i++){
   var ulPosition = document.getElementsByTagName('body')[0];
   ulPosition.appendChild(newUl);
   for(var j = 0; j < locations[i].eachHourOfOperation.length; j++){
-    var textString = 'time: ' + locations[i].eachHourOfOperation[j] + ' :: cookies: ' + locations[i].cookiesSold[j];
+    var textString = '' + locations[i].eachHourOfOperation[j] + ': ' + locations[i].cookiesSold[j] + ' cookies';
     var newLi = document.createElement('li');
     var newLiText = document.createTextNode(textString);
     newLi.appendChild(newLiText);
