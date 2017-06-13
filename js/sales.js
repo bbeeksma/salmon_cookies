@@ -16,13 +16,14 @@ function getLongestHoop(){
   return LongestLocationHoop;
 }
 
-for(var i = 0; i < getLongestHoop().length; i++){
-  var newElement = document.createElement('th');
-  newElement.textContent = getLongestHoop()[i];
-  var newTHPosition = document.getElementById('cookie_sale_head');
-  newTHPosition.appendChild(newElement);
+function buildHeader(){
+  for(var i = 0; i < getLongestHoop().length; i++){
+    var newElement = document.createElement('th');
+    newElement.textContent = getLongestHoop()[i];
+    var newTHPosition = document.getElementById('cookie_sale_head');
+    newTHPosition.appendChild(newElement);
+  }
 }
-
 /*
 for(var i = 0; i < locations.length; i++){
   var newHeader = document.createElement('h2');
