@@ -4,8 +4,20 @@ console.log('sales.js loaded');
 
 console.log(locations);
 
-sellAllTheCookies();
+sellAllTheCookies(); //generates the random cookie values on the objects
 
+function getLongestHoop(){
+  var LongestLocationHoop;
+  for(var i = 0; i < locations.length; i++){
+    if (!LongestLocationHoop || locations[i].eachHourOfOperation.length > LongestLocationHoop.length){
+      LongestLocationHoop = locations[i].eachHourOfOperation;
+    }
+  }
+  return LongestLocationHoop;
+}
+
+console.log(getLongestHoop());
+/*
 for(var i = 0; i < locations.length; i++){
   var newHeader = document.createElement('h2');
   var newText = document.createTextNode(locations[i].location);
@@ -24,3 +36,4 @@ for(var i = 0; i < locations.length; i++){
     liPosition.appendChild(newLi);
   }
 }
+*/
