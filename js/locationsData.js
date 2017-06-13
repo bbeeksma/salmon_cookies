@@ -77,6 +77,11 @@ CookieStore.prototype.renderRow = function(rowPosition){
   var newLocationCell = document.createElement('td');
   newLocationCell.textContent = this.location;
   newRow.appendChild(newLocationCell);
+  for(var i = 0; i < this.cookiesSold.length; i++){
+    var newCookieCell = document.createElement('td');
+    newCookieCell.textContent = this.cookiesSold[i];
+    newRow.appendChild(newCookieCell);
+  }
 };
 
 var firstAndPike = new CookieStore('1st and Pike','123 Seasame St. Someplace,IA',[8,21],23,65,6.3);
