@@ -5,6 +5,9 @@ console.log('sales.js loaded');
 console.log(locations);
 
 sellAllTheCookies(); //generates the random cookie values on the objects
+buildHeader();
+var rowPosition = document.getElementById('cookie_sale_body');
+locations[0].renderRow(rowPosition);
 
 function getLongestHoop(){
   var LongestLocationHoop;
