@@ -23,6 +23,10 @@ function buildHeader(){
     var newTHPosition = document.getElementById('cookie_sale_head');
     newTHPosition.appendChild(newElement);
   }
+  var newElement = document.createElement('th');
+  newElement.textContent = 'Total Cookies';
+  var newTHPosition = document.getElementById('cookie_sale_head');
+  newTHPosition.appendChild(newElement);
 }
 
 function buildDataRows(rowPosition){
