@@ -71,6 +71,10 @@ CookieStore.prototype.sellRandCookies = function(){
   }
 };
 
+CookieStore.prototype.renderRow = function(rowPosition){
+  //build a row
+};
+
 var firstAndPike = new CookieStore('1st and Pike','123 Seasame St. Someplace,IA',[8,21],23,65,6.3);
 var seaTacAirport = new CookieStore('SeaTac Airport','123 Seasame St. Someplace,IA',[8,21],3,24,1.2);
 var seattleCenter = new CookieStore('Seattle Center','123 Seasame St. Someplace,IA',[8,21],11,38,3.7);

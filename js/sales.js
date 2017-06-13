@@ -24,6 +24,7 @@ function buildHeader(){
     newTHPosition.appendChild(newElement);
   }
 }
+
 /*
 for(var i = 0; i < locations.length; i++){
   var newHeader = document.createElement('h2');
