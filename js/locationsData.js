@@ -56,8 +56,10 @@ function CookieStore(location, address, hoursOfOperation, minHourlyCustomers, ma
   this.eachHourOfOperation = eachHourOfOperation || [];
   this.customersEachHour = customersEachHour || [];
   this.cookiesSold = cookiesSold || [];
+  this.totalCookiesSold = 0
 
   this.sellRandCookies();
+  this.addCookies();
 }
 
 CookieStore.prototype.sellRandCookies = function(){
@@ -84,6 +86,17 @@ CookieStore.prototype.renderRow = function(rowPosition){
     newCookieCell.textContent = this.cookiesSold[i];
     newRow.appendChild(newCookieCell);
   }
+  var newTotalCell = document.createElement('td');
+  newTotalCell.textContent = this.totalCookiesSold;
+  newRow.appendChild(newTotalCell);
+};
+
+CookieStore.prototype.addCookies = function(){
+  var totalCookies = 0;
+  for(var i = 0; i < this.cookiesSold.length; i++){
+    totalCookies = floatSux(totalCookies + this.cookiesSold[i]);
+  }
+  this.totalCookiesSold = totalCookies;
 };
 
 var firstAndPike = new CookieStore('1st and Pike','123 Seasame St. Someplace,IA',[8,21],23,65,6.3);
