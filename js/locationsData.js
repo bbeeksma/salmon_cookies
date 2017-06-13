@@ -40,7 +40,7 @@ function randCustomersPerHour(min,max){
 
 function randCustomersEachHour(minCust,maxCust,startHoop,endHoop){
   var customers = [];
-  for(var i = 0; i <= (endHoop - startHoop); i++){
+  for(var i = 0; i < (endHoop - startHoop); i++){
     customers[i] = randCustomersPerHour(minCust,maxCust);
   }
   return customers;
@@ -49,7 +49,7 @@ function randCustomersEachHour(minCust,maxCust,startHoop,endHoop){
 var firstAndPike = {
   location: '1st and Pike'
   ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
+  ,hoursOfOperation: [8,21] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
   ,minHourlyCustomers: 23
   ,maxHourlyCustomers: 65
   ,avgCookiesPerSale: 6.3
@@ -62,7 +62,7 @@ var firstAndPike = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
+    for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
@@ -73,7 +73,7 @@ var firstAndPike = {
 var seaTacAirport = {
   location: 'SeaTac Airport'
   ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
+  ,hoursOfOperation: [8,21] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
   ,minHourlyCustomers: 3
   ,maxHourlyCustomers: 24
   ,avgCookiesPerSale: 1.2
@@ -86,7 +86,7 @@ var seaTacAirport = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
+    for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
@@ -97,7 +97,7 @@ var seaTacAirport = {
 var seattleCenter = {
   location: 'Seattle Center'
   ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
+  ,hoursOfOperation: [8,21] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
   ,minHourlyCustomers: 11
   ,maxHourlyCustomers: 38
   ,avgCookiesPerSale: 3.7
@@ -110,7 +110,7 @@ var seattleCenter = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
+    for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
@@ -121,7 +121,7 @@ var seattleCenter = {
 var capitolHill = {
   location: 'Capitol Hill'
   ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
+  ,hoursOfOperation: [8,21] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
   ,minHourlyCustomers: 20
   ,maxHourlyCustomers: 38
   ,avgCookiesPerSale: 2.3
@@ -134,7 +134,7 @@ var capitolHill = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
+    for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
@@ -145,7 +145,7 @@ var capitolHill = {
 var alki = {
   location: 'Alki'
   ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
+  ,hoursOfOperation: [8,21] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
   ,minHourlyCustomers: 2
   ,maxHourlyCustomers: 16
   ,avgCookiesPerSale: 4.6
@@ -158,7 +158,7 @@ var alki = {
     var startHoop = this.hoursOfOperation[0];
     var endHoop = this.hoursOfOperation[1];
     var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
+    for(var i = 0; i < (endHoop - startHoop); i++){
       this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
       this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
       this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
