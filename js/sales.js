@@ -4,12 +4,6 @@ console.log('sales.js loaded');
 
 console.log(locations);
 
-function sellAllTheCookies(){
-  for(var t = 0; t < locations.length; t++){
-    locations[t].sellRandCookies();
-  }
-}
-
 sellAllTheCookies();
 
 for(var i = 0; i < locations.length; i++){
