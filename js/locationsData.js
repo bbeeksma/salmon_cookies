@@ -56,6 +56,8 @@ function CookieStore(location, address, hoursOfOperation, minHourlyCustomers, ma
   this.eachHourOfOperation = eachHourOfOperation || [];
   this.customersEachHour = customersEachHour || [];
   this.cookiesSold = cookiesSold || [];
+
+  this.sellRandCookies();
 }
 
 CookieStore.prototype.sellRandCookies = function(){
@@ -97,9 +99,3 @@ var locations = [
   ,capitolHill
   ,alki
 ];
-
-function sellAllTheCookies(){
-  for(var t = 0; t < locations.length; t++){
-    locations[t].sellRandCookies();
-  }
-}
