@@ -52,6 +52,31 @@ function sellAllTheCookies(){
   }
 }
 
+function CookieStore(location, address, hoursOfOperation, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerSale, eachHourOfOperation, customersEachHour, cookiesSold){
+  this.location = location;
+  this.address = address;
+  this.hoursOfOperation = hoursOfOperation || [8,21];
+  this.minHourlyCustomers = minHourlyCustomers;
+  this.maxHourlyCustomers = maxHourlyCustomers;
+  this.avgCookiesPerSale = avgCookiesPerSale;
+  this.eachHourOfOperation = eachHourOfOperation || [];
+  this.customersEachHour = customersEachHour || [];
+  this.cookiesSold = cookiesSold || [];
+
+  this.selRandCookies = function(){
+    var minCust = this.minHourlyCustomers;
+    var maxCust = this.maxHourlyCustomers;
+    var startHoop = this.hoursOfOperation[0];
+    var endHoop = this.hoursOfOperation[1];
+    var customersThisHour = [];
+    for(var i = 0; i < (endHoop - startHoop); i++){
+      this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
+      this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
+      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
+    }
+  };
+}
+
 var firstAndPike = {
   location: '1st and Pike'
   ,address: '123 Seasame St. Someplace, IA'
