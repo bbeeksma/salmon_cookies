@@ -56,20 +56,20 @@ function CookieStore(location, address, hoursOfOperation, minHourlyCustomers, ma
   this.eachHourOfOperation = eachHourOfOperation || [];
   this.customersEachHour = customersEachHour || [];
   this.cookiesSold = cookiesSold || [];
-
-  this.sellRandCookies = function(){
-    var minCust = this.minHourlyCustomers;
-    var maxCust = this.maxHourlyCustomers;
-    var startHoop = this.hoursOfOperation[0];
-    var endHoop = this.hoursOfOperation[1];
-    var customersThisHour = [];
-    for(var i = 0; i < (endHoop - startHoop); i++){
-      this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
-      this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
-    }
-  };
 }
+
+CookieStore.prototype.sellRandCookies = function(){
+  var minCust = this.minHourlyCustomers;
+  var maxCust = this.maxHourlyCustomers;
+  var startHoop = this.hoursOfOperation[0];
+  var endHoop = this.hoursOfOperation[1];
+  var customersThisHour = [];
+  for(var i = 0; i < (endHoop - startHoop); i++){
+    this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
+    this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
+    this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
+  }
+};
 
 var firstAndPike = new CookieStore('1st and Pike','123 Seasame St. Someplace,IA',[8,21],23,65,6.3);
 var seaTacAirport = new CookieStore('SeaTac Airport','123 Seasame St. Someplace,IA',[8,21],3,24,1.2);
