@@ -46,12 +46,6 @@ function randCustomersEachHour(minCust,maxCust,startHoop,endHoop){
   return customers;
 }
 
-function sellAllTheCookies(){
-  for(var t = 0; t < locations.length; t++){
-    locations[t].sellRandCookies();
-  }
-}
-
 function CookieStore(location, address, hoursOfOperation, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerSale, eachHourOfOperation, customersEachHour, cookiesSold){
   this.location = location;
   this.address = address;
@@ -77,6 +71,13 @@ function CookieStore(location, address, hoursOfOperation, minHourlyCustomers, ma
   };
 }
 
+var firstAndPike = new CookieStore('1st and Pike','123 Seasame St. Someplace,IA',[8,21],23,65,6.3);
+var seaTacAirport = new CookieStore('SeaTac Airport','123 Seasame St. Someplace,IA',[8,21],3,24,1.2);
+var seattleCenter = new CookieStore('Seattle Center','123 Seasame St. Someplace,IA',[8,21],11,38,3.7);
+var capitolHill = new CookieStore('Capitol Hill','123 Seasame St. Someplace,IA',[8,21],20,38,2.3);
+var alki = new CookieStore('Alki','123 Seasame St. Someplace,IA',[8,21],2,16,4.6);
+console.log(firstAndPike);
+/*
 var firstAndPike = {
   location: '1st and Pike'
   ,address: '123 Seasame St. Someplace, IA'
@@ -196,6 +197,7 @@ var alki = {
     }
   }
 };
+*/
 
 var locations = [
   firstAndPike
@@ -204,3 +206,9 @@ var locations = [
   ,capitolHill
   ,alki
 ];
+
+function sellAllTheCookies(){
+  for(var t = 0; t < locations.length; t++){
+    locations[t].sellRandCookies();
+  }
+}
