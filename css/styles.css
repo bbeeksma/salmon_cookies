@@ -34,6 +34,9 @@ td{
 form{
   font-family: verdana;
 }
+li{
+  padding: 5px;
+}
 .form-list{
   padding: 0;
   margin: 0;
@@ -49,7 +52,9 @@ form{
 }
 input{
   vertical-align: middle;
+  width: 200px;
 }
 input[type='image']{
-  padding-top: 20px
+  padding-top: 20px;
+  width: 150px;
 }
