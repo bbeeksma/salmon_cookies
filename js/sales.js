@@ -4,6 +4,7 @@ console.log('sales.js loaded');
 
 window.addEventListener('load', builtTableOnLoad);
 
+var newCookieStore = {};
 var newLocation = document.getElementById('newLocation');
 var newAddress = document.getElementById('newAddress');
 var newOpenHour = document.getElementById('newOpenHour');
@@ -20,7 +21,7 @@ createLocationButton.addEventListener('click', function(event){
 });
 
 function buildCookieStore(){
-  var newCookieStore = new CookieStore(newLocation.value,newAddress.value,[newOpenHour.value,newCloseHour.value],newMinHourlyCustomers.value,newMaxHourlyCustomers.value,newAvgCookiesPerSale.value);
+  newCookieStore = new CookieStore(newLocation.value,newAddress.value,[newOpenHour.value,newCloseHour.value],newMinHourlyCustomers.value,newMaxHourlyCustomers.value,newAvgCookiesPerSale.value);
   console.log(newCookieStore);
 }
 
