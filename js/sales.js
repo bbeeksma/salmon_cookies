@@ -15,14 +15,19 @@ var newAvgCookiesPerSale = document.getElementById('newAvgCookiesPerSale');
 var createLocationButton = document.getElementById('createLocationButton');
 
 createLocationButton.addEventListener('click', function(event){
-  console.log('preventedSubmit');
   buildCookieStore();
+  buildRowForNewCookieStore();
   event.preventDefault();
 });
 
 function buildCookieStore(){
   newCookieStore = new CookieStore(newLocation.value,newAddress.value,[newOpenHour.value,newCloseHour.value],newMinHourlyCustomers.value,newMaxHourlyCustomers.value,newAvgCookiesPerSale.value);
   console.log(newCookieStore);
+}
+
+function buildRowForNewCookieStore(){
+  var rowPosition = document.getElementById('cookie_sale_body'); //where do we want to put the data rows
+  newCookieStore.renderRow(rowPosition);
 }
 
 function builtTableOnLoad(){
