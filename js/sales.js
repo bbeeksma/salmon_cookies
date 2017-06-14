@@ -14,9 +14,15 @@ var newAvgCookiesPerSale = document.getElementById('newAvgCookiesPerSale');
 var createLocationButton = document.getElementById('createLocationButton');
 
 createLocationButton.addEventListener('click', function(event){
-  alert('preventedSubmit');
+  console.log('preventedSubmit');
+  buildCookieStore();
   event.preventDefault();
 });
+
+function buildCookieStore(){
+  var newCookieStore = new CookieStore(newLocation.value,newAddress.value,[newOpenHour.value,newCloseHour.value],newMinHourlyCustomers.value,newMaxHourlyCustomers.value,newAvgCookiesPerSale.value);
+  console.log(newCookieStore);
+}
 
 function builtTableOnLoad(){
   buildHeader();
