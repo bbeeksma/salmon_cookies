@@ -2,7 +2,7 @@ body{
   color: pink;
   background-color: DarkSlateGray;
 }
-h2, h3{
+h2{
   color: white;
 }
 table{
@@ -30,9 +30,11 @@ td{
 }
 form{
   font-family: verdana;
+  padding-top: 50px
 }
 fieldset{
   max-width: 500px
+
 }
 legend, h1{
   color: LightSalmon;
