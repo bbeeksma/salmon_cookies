@@ -24,7 +24,6 @@ function buildHeader(){
   var newElement = document.createElement('th'); //blank space
   var newTHPosition = document.getElementById('cookie_sale_head');
   newTHPosition.appendChild(newElement);
-
   for(var i = 0; i < getLongestHoop().length; i++){ //the hours
     var newElement = document.createElement('th');
     newElement.textContent = getLongestHoop()[i];
