@@ -21,7 +21,14 @@ createLocationButton.addEventListener('click', function(event){
 });
 
 function buildCookieStore(){
-  newCookieStore = new CookieStore(newLocation.value,newAddress.value,[newOpenHour.value,newCloseHour.value],newMinHourlyCustomers.value,newMaxHourlyCustomers.value,newAvgCookiesPerSale.value);
+  newCookieStore = new CookieStore(
+    newLocation.value
+    ,newAddress.value
+    ,[parseInt(newOpenHour.value),parseInt(newCloseHour.value)]
+    ,parseInt(newMinHourlyCustomers.value)
+    ,parseInt(newMaxHourlyCustomers.value)
+    ,parseFloat(newAvgCookiesPerSale.value)
+  );
   console.log(newCookieStore);
 }
 
