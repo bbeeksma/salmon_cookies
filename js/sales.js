@@ -2,9 +2,13 @@
 
 console.log('sales.js loaded');
 
-buildHeader();
-var rowPosition = document.getElementById('cookie_sale_body'); //where do we want to put the data rows
-buildDataRows(rowPosition);
+window.addEventListener('load', builtTableOnLoad);
+
+function builtTableOnLoad(){
+  buildHeader();
+  var rowPosition = document.getElementById('cookie_sale_body'); //where do we want to put the data rows
+  buildDataRows(rowPosition);
+}
 
 function getLongestHoop(){ //grab the longest hoop for header
   var LongestLocationHoop;
