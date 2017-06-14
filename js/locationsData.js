@@ -40,131 +40,70 @@ function randCustomersPerHour(min,max){
 
 function randCustomersEachHour(minCust,maxCust,startHoop,endHoop){
   var customers = [];
-  for(var i = 0; i <= (endHoop - startHoop); i++){
+  for(var i = 0; i < (endHoop - startHoop); i++){
     customers[i] = randCustomersPerHour(minCust,maxCust);
   }
   return customers;
 }
 
-var firstAndPike = {
-  location: '1st and Pike'
-  ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
-  ,minHourlyCustomers: 23
-  ,maxHourlyCustomers: 65
-  ,avgCookiesPerSale: 6.3
-  ,eachHourOfOperation: []
-  ,customersEachHour: []
-  ,cookiesSold: []
-  ,sellRandCookies: function(){
-    var minCust = this.minHourlyCustomers;
-    var maxCust = this.maxHourlyCustomers;
-    var startHoop = this.hoursOfOperation[0];
-    var endHoop = this.hoursOfOperation[1];
-    var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
-      this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
-      this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
-    }
+function CookieStore(location, address, hoursOfOperation, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerSale, eachHourOfOperation, customersEachHour, cookiesSold){
+  this.location = location;
+  this.address = address;
+  this.hoursOfOperation = hoursOfOperation || [8,21];
+  this.minHourlyCustomers = minHourlyCustomers;
+  this.maxHourlyCustomers = maxHourlyCustomers;
+  this.avgCookiesPerSale = avgCookiesPerSale;
+  this.eachHourOfOperation = eachHourOfOperation || [];
+  this.customersEachHour = customersEachHour || [];
+  this.cookiesSold = cookiesSold || [];
+  this.totalCookiesSold = 0
+
+  this.sellRandCookies();
+  this.addCookies();
+}
+
+CookieStore.prototype.sellRandCookies = function(){
+  var minCust = this.minHourlyCustomers;
+  var maxCust = this.maxHourlyCustomers;
+  var startHoop = this.hoursOfOperation[0];
+  var endHoop = this.hoursOfOperation[1];
+  var customersThisHour = [];
+  for(var i = 0; i < (endHoop - startHoop); i++){
+    this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
+    this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
+    this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
   }
 };
 
-var seaTacAirport = {
-  location: 'SeaTac Airport'
-  ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
-  ,minHourlyCustomers: 3
-  ,maxHourlyCustomers: 24
-  ,avgCookiesPerSale: 1.2
-  ,eachHourOfOperation: []
-  ,customersEachHour: []
-  ,cookiesSold: []
-  ,sellRandCookies: function(){
-    var minCust = this.minHourlyCustomers;
-    var maxCust = this.maxHourlyCustomers;
-    var startHoop = this.hoursOfOperation[0];
-    var endHoop = this.hoursOfOperation[1];
-    var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
-      this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
-      this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
-    }
+CookieStore.prototype.renderRow = function(rowPosition){
+  var newRow = document.createElement('tr');
+  rowPosition.appendChild(newRow);
+  var newLocationCell = document.createElement('td');
+  newLocationCell.textContent = this.location;
+  newRow.appendChild(newLocationCell);
+  for(var i = 0; i < this.cookiesSold.length; i++){
+    var newCookieCell = document.createElement('td');
+    newCookieCell.textContent = this.cookiesSold[i];
+    newRow.appendChild(newCookieCell);
   }
+  var newTotalCell = document.createElement('td');
+  newTotalCell.textContent = this.totalCookiesSold;
+  newRow.appendChild(newTotalCell);
 };
 
-var seattleCenter = {
-  location: 'Seattle Center'
-  ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
-  ,minHourlyCustomers: 11
-  ,maxHourlyCustomers: 38
-  ,avgCookiesPerSale: 3.7
-  ,eachHourOfOperation: []
-  ,customersEachHour: []
-  ,cookiesSold: []
-  ,sellRandCookies: function(){
-    var minCust = this.minHourlyCustomers;
-    var maxCust = this.maxHourlyCustomers;
-    var startHoop = this.hoursOfOperation[0];
-    var endHoop = this.hoursOfOperation[1];
-    var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
-      this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
-      this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
-    }
+CookieStore.prototype.addCookies = function(){
+  var totalCookies = 0;
+  for(var i = 0; i < this.cookiesSold.length; i++){
+    totalCookies = floatSux(totalCookies + this.cookiesSold[i]);
   }
+  this.totalCookiesSold = totalCookies;
 };
 
-var capitolHill = {
-  location: 'Capitol Hill'
-  ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
-  ,minHourlyCustomers: 20
-  ,maxHourlyCustomers: 38
-  ,avgCookiesPerSale: 2.3
-  ,eachHourOfOperation: []
-  ,customersEachHour: []
-  ,cookiesSold: []
-  ,sellRandCookies: function(){
-    var minCust = this.minHourlyCustomers;
-    var maxCust = this.maxHourlyCustomers;
-    var startHoop = this.hoursOfOperation[0];
-    var endHoop = this.hoursOfOperation[1];
-    var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
-      this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
-      this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
-    }
-  }
-};
-
-var alki = {
-  location: 'Alki'
-  ,address: '123 Seasame St. Someplace, IA'
-  ,hoursOfOperation: [8,20] //right now HooP functions only work if you start ON the hour.  no opening at 8:30!
-  ,minHourlyCustomers: 2
-  ,maxHourlyCustomers: 16
-  ,avgCookiesPerSale: 4.6
-  ,eachHourOfOperation: []
-  ,customersEachHour: []
-  ,cookiesSold: []
-  ,sellRandCookies: function(){
-    var minCust = this.minHourlyCustomers;
-    var maxCust = this.maxHourlyCustomers;
-    var startHoop = this.hoursOfOperation[0];
-    var endHoop = this.hoursOfOperation[1];
-    var customersThisHour = [];
-    for(var i = 0; i <= (endHoop - startHoop); i++){
-      this.eachHourOfOperation[i] = getEachHourOfOperation(startHoop,endHoop)[i];
-      this.customersEachHour[i] = randCustomersEachHour(minCust,maxCust,startHoop,endHoop)[i];
-      this.cookiesSold[i] = floatSux(this.customersEachHour[i] * this.avgCookiesPerSale);
-    }
-  }
-};
+var firstAndPike = new CookieStore('1st and Pike','123 Seasame St. Someplace,IA',[8,21],23,65,6.3);
+var seaTacAirport = new CookieStore('SeaTac Airport','123 Seasame St. Someplace,IA',[8,21],3,24,1.2);
+var seattleCenter = new CookieStore('Seattle Center','123 Seasame St. Someplace,IA',[8,21],11,38,3.7);
+var capitolHill = new CookieStore('Capitol Hill','123 Seasame St. Someplace,IA',[8,21],20,38,2.3);
+var alki = new CookieStore('Alki','123 Seasame St. Someplace,IA',[8,21],2,16,4.6);
 
 var locations = [
   firstAndPike

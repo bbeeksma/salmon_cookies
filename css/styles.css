@@ -1,10 +1,33 @@
 body{
   color: White;
-  background-color: DarkSlateGray
+  background-color: DarkSlateGray;
+}
+p{
+  max-width: 800px
 }
 h2{
-  color: DarkSalmon
+  color: LightSalmon;
 }
-li{
-  color: Pink
+table{
+  border-collapse: collapse;
+}
+tr:nth-child(even){
+  background-color: DarkSalmon;
+}
+tr:nth-child(odd){
+  background-color: Pink;
+}
+
+table, th, td {
+    border: 1px solid white;
+}
+th, td {
+  padding: 5px;
+}
+th{
+  background-color: Gray;
+  color: DarkSlateGray;
+}
+td{
+  color: black;
 }
