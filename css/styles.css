@@ -50,3 +50,6 @@ form{
 input{
   vertical-align: middle;
 }
+input[type='image']{
+  padding-top: 20px
+}
