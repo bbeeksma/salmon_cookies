@@ -17,13 +17,17 @@ function getLongestHoop(){ //grab the longest hoop for header
 }
 
 function buildHeader(){
-  for(var i = 0; i < getLongestHoop().length; i++){
+  var newElement = document.createElement('th'); //blank space
+  var newTHPosition = document.getElementById('cookie_sale_head');
+  newTHPosition.appendChild(newElement);
+
+  for(var i = 0; i < getLongestHoop().length; i++){ //the hours
     var newElement = document.createElement('th');
     newElement.textContent = getLongestHoop()[i];
     var newTHPosition = document.getElementById('cookie_sale_head');
     newTHPosition.appendChild(newElement);
   }
-  var newElement = document.createElement('th');
+  var newElement = document.createElement('th');// total header
   newElement.textContent = 'Total Cookies';
   var newTHPosition = document.getElementById('cookie_sale_head');
   newTHPosition.appendChild(newElement);
