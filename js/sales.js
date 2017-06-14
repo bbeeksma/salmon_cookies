@@ -13,6 +13,11 @@ var newMaxHourlyCustomers = document.getElementById('newMaxHourlyCustomers');
 var newAvgCookiesPerSale = document.getElementById('newAvgCookiesPerSale');
 var createLocationButton = document.getElementById('createLocationButton');
 
+createLocationButton.addEventListener('click', function(event){
+  alert('preventedSubmit');
+  event.preventDefault();
+});
+
 function builtTableOnLoad(){
   buildHeader();
   var rowPosition = document.getElementById('cookie_sale_body'); //where do we want to put the data rows
