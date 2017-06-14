@@ -16,19 +16,19 @@
       <input type = 'text' name = 'address' id = 'newAddress' />
 
       <label class='newLocationLabel' for='newOpenHour'>Location Opening Hour:</label>
-      <input type = 'text' name = 'openHour' id = 'newOpenHour' />
+      <input type = 'number' min = '0' max = '24' step = '1' value = '6' name = 'openHour' id = 'newOpenHour' />
 
       <label class='newLocationLabel' for='newCloseHour'>Location Closing Hour:</label>
-      <input type = 'text' name = 'closeHour' id = 'newCloseHour' />
+      <input type = 'number' min = '0' max = '24' step = '1' value = '20' name = 'closeHour' id = 'newCloseHour' />
 
       <label class='newLocationLabel' for='newMinHourlyCustomers'>Location Min Hourly Customers:</label>
-      <input type = 'text' name = 'minHourlyCustomers' id = 'newMinHourlyCustomers' />
+      <input type = 'number' step = '1' name = 'minHourlyCustomers' id = 'newMinHourlyCustomers' />
 
       <label class='newLocationLabel' for='newMaxHourlyCustomers'>Location Max Hourly Customers:</label>
-      <input type = 'text' name = 'maxHourlyCustomers' id = 'newMaxHourlyCustomers' />
+      <input type = 'number' step = '1' name = 'maxHourlyCustomers' id = 'newMaxHourlyCustomers' />
 
       <label class='newLocationLabel' for='newAvgCookiesPerSale'>Location Average Cookies Sold:</label>
-      <input type = 'text' name = 'avgCookiesPerSale' id = 'newAvgCookiesPerSale' />
+      <input type = 'number' step = '0.1' name = 'avgCookiesPerSale' id = 'newAvgCookiesPerSale' />
     </fieldset>
 
     <h2>Cookie Sales By Site and Hour</h2>
