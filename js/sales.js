@@ -4,6 +4,15 @@ console.log('sales.js loaded');
 
 window.addEventListener('load', builtTableOnLoad);
 
+var newLocation = document.getElementById('newLocation');
+var newAddress = document.getElementById('newAddress');
+var newOpenHour = document.getElementById('newOpenHour');
+var newCloseHour = document.getElementById('newCloseHour');
+var newMinHourlyCustomers = document.getElementById('newMinHourlyCustomers');
+var newMaxHourlyCustomers = document.getElementById('newMaxHourlyCustomers');
+var newAvgCookiesPerSale = document.getElementById('newAvgCookiesPerSale');
+var createLocationButton = document.getElementById('createLocationButton');
+
 function builtTableOnLoad(){
   buildHeader();
   var rowPosition = document.getElementById('cookie_sale_body'); //where do we want to put the data rows
