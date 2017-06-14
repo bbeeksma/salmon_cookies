@@ -15,10 +15,23 @@ var newAvgCookiesPerSale = document.getElementById('newAvgCookiesPerSale');
 var createLocationButton = document.getElementById('createLocationButton');
 
 createLocationButton.addEventListener('click', function(event){
+  if(breakOnEmpty()){
+    alert('Please fill in the Location and Address fields.');
+    return;
+  }
   buildCookieStore();
   buildRowForNewCookieStore();
   event.preventDefault();
 });
+
+function breakOnEmpty(){
+  if(!newLocation.value || !newAddress.value){
+    return true;
+  }
+  else{
+    return;
+  }
+}
 
 function buildCookieStore(){
   newCookieStore = new CookieStore(
