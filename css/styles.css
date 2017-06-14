@@ -1,10 +1,7 @@
 body{
-  color: pink;
+  color: white;
   background-color: DarkSlateGray;
   margin-left: 50px;
-}
-h1{
-  color: white;
 }
 p{
   max-width: 900px;
@@ -40,7 +37,7 @@ fieldset{
   max-width: 500px
 
 }
-legend, h2{
+legend, h1, h2{
   color: LightSalmon;
 }
 li{
@@ -57,7 +54,8 @@ li{
   width: 200px;
   display: inline-block;
   vertical-align: middle;
-  font-size: 14px
+  font-size: 14px;
+  color: pink;
 }
 input{
   vertical-align: middle;
