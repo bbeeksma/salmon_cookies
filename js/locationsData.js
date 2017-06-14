@@ -56,7 +56,7 @@ function CookieStore(location, address, hoursOfOperation, minHourlyCustomers, ma
   this.eachHourOfOperation = eachHourOfOperation || [];
   this.customersEachHour = customersEachHour || [];
   this.cookiesSold = cookiesSold || [];
-  this.totalCookiesSold = 0
+  this.totalCookiesSold = 0;
 
   this.sellRandCookies();
   this.addCookies();

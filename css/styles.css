@@ -1,12 +1,9 @@
 body{
-  color: White;
+  color: pink;
   background-color: DarkSlateGray;
 }
-p{
-  max-width: 800px
-}
-h2{
-  color: LightSalmon;
+h2, h3{
+  color: white;
 }
 table{
   border-collapse: collapse;
@@ -37,6 +34,9 @@ form{
 fieldset{
   max-width: 500px
 }
+legend, h1{
+  color: LightSalmon;
+}
 li{
   padding: 5px;
 }
@@ -60,4 +60,7 @@ input{
 input[type='image']{
   padding-top: 20px;
   width: 150px;
+}
+input[type='text'], input[type='number']{
+  background-color: MistyRose;
 }
