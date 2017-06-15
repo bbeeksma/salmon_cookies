@@ -6,29 +6,53 @@
   </head>
   <body>
     <h1>Pat's Salmon Cookies</h1>
-    <p>The game's not big enough unless it scares you a little. Did you come here for something in particular or just general Riker-bashing?
-      My oath is between Captain Kargan and myself. Your only concern is with how you obey my orders. Or do you prefer the rank of prisoner
-      to that of lieutenant? Is it my imagination, or have tempers become a little frayed on the ship lately? Yesterday I did not know how to eat gagh.
-      Besides, you look good in a dress.</p>
-
-
-
+    <p>Now we know what they mean by 'advanced' tactical training. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. They were just sucked into space. I've had twelve years to think about it. And if I had it to do over again, I would have grabbed the phaser and pointed it at you instead of them. Smooth as an android's bottom, eh, Data? Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation. When has justice ever been as simple as a rule book? We finished our first sensor sweep of the neutral zone. What? We're not at all alike!</p>
     <h2>Cookie Sales By Site and Hour</h2>
-
     <table>
       <thead>
         <tr id = 'cookie_sale_head'>
-        <th> </th>
         </tr>
       </thead>
       <tbody id = 'cookie_sale_body'>
       </tbody>
     </table>
-
-
+    <form>
+      <fieldset>
+        <legend>Create a New Location</legend>
+        <ul class = 'form-list'>
+          <li class = 'form input'>
+            <label class='newLocationLabel' for='newLocation'>Location:</label>
+            <input type = 'text' name = 'location' required = 'required' id = 'newLocation' />
+          </li>
+          <li class = 'form input'>
+            <label class='newLocationLabel' for='newAddress'>Address:</label>
+            <input type = 'text' name = 'address' required = 'required' id = 'newAddress' />
+          </li>
+          <li class = 'form input'>
+            <label class='newLocationLabel' for='newOpenHour'>Opening Hour:</label>
+            <input type = 'number' min = '0' max = '24' step = '1' value = '8' name = 'openHour' id = 'newOpenHour' />
+          </li>
+          <li class = 'form input'>
+            <label class='newLocationLabel' for='newCloseHour'>Closing Hour:</label>
+            <input type = 'number' min = '0' max = '24' step = '1' value = '21' name = 'closeHour' id = 'newCloseHour' />
+          </li>
+          <li class = 'form input'>
+            <label class='newLocationLabel' for='newMinHourlyCustomers'>Min Hourly Customers:</label>
+            <input type = 'number' min = '0' value = '0' step = '1' name = 'minHourlyCustomers' id = 'newMinHourlyCustomers' />
+          </li>
+          <li class = 'form input'>
+            <label class='newLocationLabel' for='newMaxHourlyCustomers'>Max Hourly Customers:</label>
+            <input type = 'number' min = '0' value = '0' step = '1' name = 'maxHourlyCustomers' id = 'newMaxHourlyCustomers' />
+          </li>
+          <li class = 'form input'>
+            <label class='newLocationLabel' for='newAvgCookiesPerSale'>Average Cookies Sold:</label>
+            <input type = 'number' min = '0' value = '0' step = '0.1' name = 'avgCookiesPerSale' id = 'newAvgCookiesPerSale' />
+          </li>
+        </ul>
+        <input type = 'image' src = '../images/button_create-location.png' name = 'createLocation' id = 'createLocationButton'/>
+      </fieldset>
+    </form>
     <script src = '../js/locationsData.js'></script>
     <script src = '../js/sales.js'></script>
   </body>
-
-
 </html>
