@@ -4,6 +4,10 @@ body{
   margin-left: 50px;
   font-family: Georgia, serif;
 }
+.bodyContainer{
+  width: 80%;
+  margin: auto;
+}
 a{
   color: inherit;
   text-decoration: inherit;
@@ -18,6 +22,11 @@ p{
 h1,h2,h3{
   font-family: Shrikhand, cursive;
   color: LightSalmon;
+}
+/*Location Sidebar*/
+.storeLocations{
+  float: right;
+  width: 20%;
 }
 /* Header */
 header{
@@ -69,7 +78,7 @@ header li:hover{
   float: left;
   width: 25%;
 }
-/* Table Stuff */
+/* Table*/
 .tableContainer{
   margin: auto;
   width: 80%;
@@ -99,7 +108,7 @@ th{
 td{
   color: black;
 }
-/* Form stuff */
+/* Form */
 .formContainer{
   margin: auto;
   width: 80%;
