@@ -2,6 +2,7 @@ body{
   color: white;
   background-color: DarkSlateGray;
   margin-left: 50px;
+  font-family: Georgia, serif;
 }
 p{
   max-width: 900px;
@@ -9,6 +10,10 @@ p{
 .explanationText{
   margin: auto;
   width: 80%;
+}
+h1,h2,h3{
+  font-family: Shrikhand, cursive;
+  color: LightSalmon;
 }
 /* Header */
 header{
@@ -28,6 +33,7 @@ header h1{
 }
 header li{
   display: inline;
+  color: DarkSalmon;
 }
 .header-left{
   float: left;
@@ -47,6 +53,8 @@ header li{
 }
 table{
   border-collapse: collapse;
+  font-family: verdana, sans-serif;
+  font-size: 14px;
 }
 tr:nth-child(even){
   background-color: DarkSalmon;
@@ -91,8 +99,9 @@ form{
 fieldset{
   max-width: 500px;
 }
-legend, h1, h2{
+legend{
   color: LightSalmon;
+  font-family: Shrikhand, cursive;
 }
 .form-list{
   padding: 0;
