@@ -20,25 +20,37 @@ header{
   background-color: MistyRose;
   margin: auto;
   width: 80%;
-  min-width: 500px;
+  min-width: 540px;
   overflow: auto;
   box-shadow: 9px 10px 33px 0px rgba(0,0,0,0.75);
   border-radius: 30px;
 }
 header h1{
   float: left;
-  margin: 2% 5%;
+  margin-top: 3%;
   padding: 0;
-  width: 30%;
+  width: 45%;
+  text-align: center;
+}
+header ul{
+  padding: 0;
+  text-align: center;
 }
 header li{
-  display: inline;
-  color: DarkSalmon;
+  display: inline-block;
+  color: DarkSlateGray;
+  background-color: Gray;
+  padding: 3px 10px;
+  border: solid white 2px;
+  border-radius: 30px;
+  width: 50px;
+  margin: 3px;
+  text-align: center;
 }
 .header-left{
   float: left;
   display: block;
-  width: 25%;
+  width: 28%;
   min-width: 150px;
   margin: 1%;
 }
