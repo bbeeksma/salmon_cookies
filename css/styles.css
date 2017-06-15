@@ -3,6 +3,10 @@ body{
   background-color: DarkSlateGray;
   margin-left: 50px;
 }
+header{
+  background-color: MistyRose;
+  text-align: center;
+}
 p{
   max-width: 900px;
 }
