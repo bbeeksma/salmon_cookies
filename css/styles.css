@@ -10,6 +10,7 @@ header{
 p{
   max-width: 900px;
 }
+/* Table Stuff */
 table{
   border-collapse: collapse;
 }
@@ -33,9 +34,6 @@ th{
 td{
   color: black;
 }
-legend, h1, h2{
-  color: LightSalmon;
-}
 /* Form stuff */
 input{
   vertical-align: middle;
@@ -54,6 +52,9 @@ form{
 }
 fieldset{
   max-width: 500px;
+}
+legend, h1, h2{
+  color: LightSalmon;
 }
 .form-list{
   padding: 0;
