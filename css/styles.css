@@ -22,7 +22,7 @@ h1,h2,h3{
 /* Header */
 header{
   background-color: MistyRose;
-  margin: auto;
+  margin: 30px auto;
   width: 80%;
   min-width: 540px;
   overflow: auto;
