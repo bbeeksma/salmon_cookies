@@ -5,7 +5,7 @@ body{
   font-family: Georgia, serif;
 }
 .bodyContainer{
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 a{
@@ -17,7 +17,7 @@ p{
 }
 .explanationText{
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 h1,h2,h3{
   font-family: Shrikhand, cursive;
@@ -32,7 +32,7 @@ h1,h2,h3{
 header{
   background-color: MistyRose;
   margin: 30px auto;
-  width: 80%;
+  width: 90%;
   min-width: 540px;
   overflow: auto;
   box-shadow: 9px 10px 33px 0px rgba(0,0,0,0.75);
@@ -81,7 +81,7 @@ header li:hover{
 /* Table*/
 .tableContainer{
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 table{
   border-collapse: collapse;
@@ -111,7 +111,7 @@ td{
 /* Form */
 .formContainer{
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 input{
   vertical-align: middle;
