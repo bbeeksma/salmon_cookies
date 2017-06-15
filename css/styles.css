@@ -47,6 +47,11 @@ header li{
   margin: 3px;
   text-align: center;
 }
+header li:hover{
+  background-color: DarkSlateGray;
+  color: Gray;
+  border-color: black;
+}
 .header-left{
   float: left;
   display: block;
