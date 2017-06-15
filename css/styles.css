@@ -5,7 +5,9 @@ body{
 }
 header{
   background-color: MistyRose;
-  text-align: center;
+  min-height: 80px;
+  margin: auto;
+  width: 80%;
 }
 p{
   max-width: 900px;
