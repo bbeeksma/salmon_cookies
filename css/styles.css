@@ -4,6 +4,10 @@ body{
   margin-left: 50px;
   font-family: Georgia, serif;
 }
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
 p{
   max-width: 900px;
 }
