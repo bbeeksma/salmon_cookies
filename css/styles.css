@@ -6,7 +6,6 @@ body{
 header{
   position: relative;
   background-color: MistyRose;
-  min-height: 50px;
   margin: auto;
   width: 80%;
 }
@@ -16,6 +15,13 @@ header h1{
   padding: 0;
   top: 50%;
   left: 50%;
+}
+.header-left{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  min-width: 150px;
 }
 p{
   max-width: 900px;
