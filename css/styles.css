@@ -13,13 +13,17 @@ a{
   text-decoration: inherit;
 }
 .promoText{
-  width: 100%;
+  max-width: 900px
   line-height: 1.2em;
 }
-.promoText img{
+.paragraphStarter{
   float: left;
   max-width: 70px;
   margin: 0 5px;
+}
+.rightPara{
+  float: right;
+  max-width: 250px;
 }
 .explanationText{
   margin: auto;
@@ -62,6 +66,9 @@ h1,h2,h3{
   font-family: verdana, sans-serif;
   font-size: 12px;
   color: DarkSalmon;
+}
+.storeLocations dd:last-child{
+  color: MistyRose;
 }
 .locationBox{
   border-width: 0 0 2px 0;
