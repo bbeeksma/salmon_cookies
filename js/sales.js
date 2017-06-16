@@ -25,12 +25,8 @@ createLocationButton.addEventListener('click', function(event){
 });
 
 function breakOnEmpty(){
-  if(!newLocation.value || !newAddress.value){
+  if(!newLocation.value || !newAddress.value)
     return true;
-  }
-  else{
-    return;
-  }
 }
 
 function buildCookieStore(){
@@ -67,19 +63,17 @@ function getLongestHoop(){ //grab the longest hoop for header
 }
 
 function buildHeader(){
-  var newElement = document.createElement('th'); //blank space
+  var newBlank = document.createElement('th');
   var newTHPosition = document.getElementById('cookie_sale_head');
-  newTHPosition.appendChild(newElement);
-  for(var i = 0; i < getLongestHoop().length; i++){ //the hours
-    var newElement = document.createElement('th');
-    newElement.textContent = getLongestHoop()[i];
-    var newTHPosition = document.getElementById('cookie_sale_head');
-    newTHPosition.appendChild(newElement);
+  newTHPosition.appendChild(newBlank);
+  for(var i = 0; i < getLongestHoop().length; i++){
+    var newHour = document.createElement('th');
+    newHour.textContent = getLongestHoop()[i];
+    newTHPosition.appendChild(newHour);
   }
-  var newElement = document.createElement('th');// total header
-  newElement.textContent = 'Total Cookies';
-  var newTHPosition = document.getElementById('cookie_sale_head');
-  newTHPosition.appendChild(newElement);
+  var newTotal = document.createElement('th');
+  newTotal.textContent = 'Total Cookies';
+  newTHPosition.appendChild(newTotal);
 }
 
 function buildDataRows(rowPosition){

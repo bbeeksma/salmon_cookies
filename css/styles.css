@@ -2,12 +2,168 @@ body{
   color: white;
   background-color: DarkSlateGray;
   margin-left: 50px;
+  font-family: Georgia, serif;
 }
-p{
+.bodyContainer{
+  width: 90%;
+  margin: auto;
+}
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+.promoText{
   max-width: 900px;
+  line-height: 1.2em;
+}
+.paragraphStarter{
+  float: left;
+  max-width: 70px;
+  margin: 0 5px;
+}
+.rightPara{
+  float: right;
+  max-width: 250px;
+}
+.explanationText{
+  margin: auto;
+  width: 90%;
+}
+h1,h2,h3{
+  font-family: Shrikhand, cursive;
+  color: LightSalmon;
+}
+/*Products Box*/
+.productsBox{
+  background-color: pink;
+  overflow: auto;
+  width: 75%:
+}
+.item{
+  float: left;
+  width: 31.3333%;
+  margin: 1%
+}
+.item img{
+  float: left;
+  width: 100%
+}
+.productsBox h2{
+  margin: 0 0 15px 15px;
+}
+.itemName{
+  font-size: 18px;
+  color: DarkSlateGray;
+}
+.itemDesc{
+  font-size: 12px;
+  color: gray;
+}
+.itemPrice{
+  font-family: verdana, sans-serif;
+  font-size: 14px;
+}
+/*Location Sidebar*/
+.storeLocations{
+  float: right;
+  width: 20%;
+  background-color: grey;
+  border-radius: 15px;
+  box-shadow: 9px 10px 33px 0px rgba(0,0,0,0.75);
+  min-width: 150px;
+  margin-left: 30px;
+}
+.storeLocations h3{
+  margin: 0 5px;
+  text-align: center;
+
+}
+.storeLocations dl{
+  margin: 0;
+}
+.storeLocations dt{
+  margin-top: 15px;
+  padding-left: 15px;
+  color: pink;
+}
+.storeLocations dd{
+  margin: 0;
+  padding: 3px 5px 3px 30px;
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+  color: DarkSalmon;
+}
+.storeLocations dd:last-child{
+  color: MistyRose;
+}
+.locationBox{
+  border-width: 0 0 2px 0;
+  border-style: dotted;
+  border-color: DarkSlateGray;
+  padding-bottom: 15px;
+}
+.locationBox:last-child{
+  border-width: 0;
+}
+/* Header */
+header{
+  background-color: MistyRose;
+  margin: 30px auto;
+  width: 90%;
+  min-width: 540px;
+  overflow: auto;
+  box-shadow: 9px 10px 33px 0px rgba(0,0,0,0.75);
+  border-radius: 30px;
+}
+header h1{
+  float: left;
+  margin-top: 3%;
+  padding: 0;
+  width: 43%;
+  text-align: center;
+}
+header ul{
+  padding: 0 10px 0 0;
+  text-align: right;
+}
+header li{
+  display: inline-block;
+  color: DarkSlateGray;
+  background-color: Gray;
+  padding: 3px 10px;
+  border: solid white 2px;
+  border-radius: 30px;
+  width: 40px;
+  margin: 3px;
+  text-align: center;
+  font-family: verdana,sans-serif;
+  font-size: 12px;
+}
+header li:hover{
+  background-color: DarkSlateGray;
+  color: Gray;
+  border-color: black;
+}
+.header-left{
+  float: left;
+  display: block;
+  width: 28%;
+  min-width: 150px;
+  margin: 1%;
+}
+.top-nav{
+  float: left;
+  width: 27%;
+}
+/* Table*/
+.tableContainer{
+  margin: auto;
+  width: 90%;
 }
 table{
   border-collapse: collapse;
+  font-family: verdana, sans-serif;
+  font-size: 14px;
 }
 tr:nth-child(even){
   background-color: DarkSalmon;
@@ -29,19 +185,32 @@ th{
 td{
   color: black;
 }
+/* Form */
+.formContainer{
+  margin: auto;
+  width: 90%;
+}
+input{
+  vertical-align: middle;
+  width: 200px;
+}
+input[type='image']{
+  padding-top: 20px;
+  width: 150px;
+}
+input[type='text'], input[type='number']{
+  background-color: MistyRose;
+}
 form{
   font-family: verdana;
-  padding-top: 50px
+  padding-top: 50px;
 }
 fieldset{
-  max-width: 500px
-
+  max-width: 500px;
 }
-legend, h1, h2{
+legend{
   color: LightSalmon;
-}
-li{
-  padding: 5px;
+  font-family: Shrikhand, cursive;
 }
 .form-list{
   padding: 0;
@@ -57,14 +226,6 @@ li{
   font-size: 14px;
   color: pink;
 }
-input{
-  vertical-align: middle;
-  width: 200px;
-}
-input[type='image']{
-  padding-top: 20px;
-  width: 150px;
-}
-input[type='text'], input[type='number']{
-  background-color: MistyRose;
+.form-input{
+  padding: 5px;
 }

@@ -99,11 +99,11 @@ CookieStore.prototype.addCookies = function(){
   this.totalCookiesSold = totalCookies;
 };
 
-var firstAndPike = new CookieStore('1st and Pike','123 Seasame St. Someplace,IA',[8,21],23,65,6.3);
-var seaTacAirport = new CookieStore('SeaTac Airport','123 Seasame St. Someplace,IA',[8,21],3,24,1.2);
-var seattleCenter = new CookieStore('Seattle Center','123 Seasame St. Someplace,IA',[8,21],11,38,3.7);
-var capitolHill = new CookieStore('Capitol Hill','123 Seasame St. Someplace,IA',[8,21],20,38,2.3);
-var alki = new CookieStore('Alki','123 Seasame St. Someplace,IA',[8,21],2,16,4.6);
+var firstAndPike = new CookieStore('1st and Pike','2847 University St. Seattle, WA',[8,21],23,65,6.3);
+var seaTacAirport = new CookieStore('SeaTac Airport','946 Drew Ave. Seattle, WA',[8,21],3,24,1.2);
+var seattleCenter = new CookieStore('Seattle Center','6 Pound Hill Rd. Seattle, WA',[8,21],11,38,3.7);
+var capitolHill = new CookieStore('Capitol Hill','123 Seasame St. Seattle, WA',[8,21],20,38,2.3);
+var alki = new CookieStore('Alki','349 Morning Side Dr. Seattle, WA',[8,21],2,16,4.6);
 
 var locations = [
   firstAndPike
