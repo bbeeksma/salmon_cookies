@@ -24,14 +24,30 @@ h1,h2,h3{
   color: LightSalmon;
 }
 /*Location Sidebar*/
+.locationBox{
+  border-width: 0 0 2px 0;
+  border-style: dotted;
+  border-color: DarkSlateGray;
+}
+.locationBox:last-child{
+  border-width: 0;
+}
 .storeLocations{
   float: right;
   width: 20%;
   background-color: grey;
   box-shadow: 9px 10px 33px 0px rgba(0,0,0,0.75);
 }
+.storeLocations dl{
+  margin: 0;
+}
+.storeLocations dt{
+  margin-top: 15px;
+  padding-left: 15px;
+}
 .storeLocations dd{
   margin: 0;
+  padding: 3px 5px 3px 30px;
 }
 /* Header */
 header{
