@@ -14,6 +14,12 @@ a{
 }
 .promoText{
   width: 100%;
+  line-height: 1.2em;
+}
+.promoText img{
+  float: left;
+  max-width: 70px;
+  margin: 0 5px;
 }
 .explanationText{
   margin: auto;
