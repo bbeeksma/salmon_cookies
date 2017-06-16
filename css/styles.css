@@ -51,6 +51,18 @@ h1,h2,h3{
 .productsBox h2{
   margin: 0 0 15px 15px;
 }
+.itemName{
+  font-size: 18px;
+  color: DarkSlateGray;
+}
+.itemDesc{
+  font-size: 12px;
+  color: gray;
+}
+.itemPrice{
+  font-family: verdana, sans-serif;
+  font-size: 14px;
+}
 /*Location Sidebar*/
 .storeLocations{
   float: right;
