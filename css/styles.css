@@ -27,6 +27,11 @@ h1,h2,h3{
 .storeLocations{
   float: right;
   width: 20%;
+  background-color: grey;
+  box-shadow: 9px 10px 33px 0px rgba(0,0,0,0.75);
+}
+.storeLocations dd{
+  margin: 0;
 }
 /* Header */
 header{
