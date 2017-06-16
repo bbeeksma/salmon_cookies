@@ -13,7 +13,7 @@ a{
   text-decoration: inherit;
 }
 .promoText{
-  max-width: 900px
+  max-width: 900px;
   line-height: 1.2em;
 }
 .paragraphStarter{
@@ -36,6 +36,20 @@ h1,h2,h3{
 /*Products Box*/
 .productsBox{
   background-color: pink;
+  overflow: auto;
+  width: 75%:
+}
+.item{
+  float: left;
+  width: 31.3333%;
+  margin: 1%
+}
+.item img{
+  float: left;
+  width: 100%
+}
+.productsBox h2{
+  margin: 0 0 15px 15px;
 }
 /*Location Sidebar*/
 .storeLocations{
