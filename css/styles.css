@@ -37,16 +37,16 @@ h1,h2,h3{
 .productsBox{
   background-color: pink;
   overflow: auto;
-  width: 75%:
+  width: 75%;
 }
 .item{
   float: left;
   width: 31.3333%;
-  margin: 1%
+  margin: 1%;
 }
 .item img{
   float: left;
-  width: 100%
+  width: 100%;
 }
 .productsBox h2{
   margin: 0 0 15px 15px;
@@ -62,6 +62,42 @@ h1,h2,h3{
 .itemPrice{
   font-family: verdana, sans-serif;
   font-size: 14px;
+}
+.saleItem:hover{
+  animation: bounce 1s ease;
+  animation-iteration-count: 1;
+}
+@keyframes bounce {
+  10%{
+    transform: translateY(10px);
+  }
+  20%{
+    transform: translateY(0);
+  }
+  30%{
+    transform: translateY(8px);
+  }
+  40%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(6px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  70%{
+    transform: translateY(4px);
+  }
+  80%{
+    transform: translateY(0);
+  }
+  90%{
+    transform: translateY(2px);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 /*Location Sidebar*/
 .storeLocations{
@@ -143,6 +179,8 @@ header li:hover{
   background-color: DarkSlateGray;
   color: Gray;
   border-color: black;
+  animation: bounce 1s ease;
+  animation-iteration-count: 1;
 }
 .header-left{
   float: left;
