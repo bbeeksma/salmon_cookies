@@ -63,10 +63,6 @@ h1,h2,h3{
   font-family: verdana, sans-serif;
   font-size: 14px;
 }
-.saleItem:hover{
-  animation: bounce 1s ease;
-  animation-iteration-count: 1;
-}
 @keyframes bounce {
   10%{
     transform: translateY(10px);
