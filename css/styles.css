@@ -61,7 +61,7 @@ h1,h2,h3{
 }
 .itemPrice{
   font-family: verdana, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 .saleItem:hover{
   animation: bounce 1s ease;
