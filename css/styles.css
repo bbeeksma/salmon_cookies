@@ -64,6 +64,7 @@ h1,h2,h3{
   font-size: 16px;
 }
 .saleItem:hover{
+  box-shadow: inset 0 0 0 3px #98fb98;
   animation: bounce 1s ease;
   animation-iteration-count: 1;
 }
